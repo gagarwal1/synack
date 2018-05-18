@@ -43,9 +43,6 @@ public class DynamicContent extends BaseClass {
 				System.out.println(avatarFilesizes.get(url));
 				
 				if(!avatarFilesizes.get(url).equals(punisher.get(url))){
-					
-					
-					
 					System.out.println(avatarFilesizes.get(url) +" Not Maching Values   " + punisher.get(url));
 					driver.findElement(By.xpath("//a[contains(text(),'click')]")).click();
 					clickAnElementByXpath("//div[@class='large-2 columns']/img");
