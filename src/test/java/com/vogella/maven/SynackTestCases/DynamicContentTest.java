@@ -32,10 +32,9 @@ public class DynamicContentTest extends BaseClassTest {
 		punisher.put(url, Float.toString(Psize.length()));
 		System.out.println("pun" + punisher);
 		dynamic.setImages();
-	     dynamic.isImagePresent(punisher);
-		//Assert.assertTrue(result);
-		
-		
+	     boolean result = dynamic.isImagePresent(punisher);
+	     System.out.println("result" + result);
+		 Assert.assertTrue(result);	
 	}
 	
 	
