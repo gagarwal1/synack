@@ -24,7 +24,6 @@ public class DynamicContent extends BaseClass {
 		List<WebElement> avatars = driver.findElements(By.xpath("//div[@class='large-2 columns']/img"));	
 		for(int i= 0; i< avatars.size(); i++) {
 			 String url = avatars.get(i).getAttribute("src").toString(); 
-			 System.out.println("please print" + url);
 			 URL website = new URL(url);
 			 ReadableByteChannel rbc = Channels.newChannel(website.openStream());
 			 FileOutputStream fos = new FileOutputStream(i+"information.html");
