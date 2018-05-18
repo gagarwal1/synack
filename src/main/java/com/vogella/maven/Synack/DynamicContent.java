@@ -29,23 +29,16 @@ public class DynamicContent extends BaseClass {
 			 FileOutputStream fos = new FileOutputStream(i+"information.html");
 			 fos.getChannel().transferFrom(rbc, 0, Long.MAX_VALUE);
 			 File f = new File(i+"information.html");
-	    	 avatarFilesizes.put(url, Float.toString(f.length()));	 
-	    	 
-	    	 
-		}
-		
-		
-		System.out.println(avatarFilesizes);
-	
-		
+	    	 avatarFilesizes.put(url, Float.toString(f.length()));	 	 
+		}	
 	}
-
+	
 	public boolean isImagePresent(Map<String, String> punisher) throws IOException {
 		
 			setImages();
 			
 			Set<String> myUrl = avatarFilesizes.keySet();
-			for(String url:myUrl) {
+			for (String url : myUrl) {
 				
 				System.out.println(avatarFilesizes.get(url));
 				
@@ -64,14 +57,9 @@ public class DynamicContent extends BaseClass {
 				else {
 					
 					System.out.println("Maching Values");
-					return true;
-					
-					
-				}
-				
-				
+					return true;					
+				}	
 			}
-			return false;
-		
+			return false;	
 	}
 }
