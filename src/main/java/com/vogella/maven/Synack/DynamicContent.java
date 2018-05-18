@@ -35,17 +35,11 @@ public class DynamicContent extends BaseClass {
 	}
 	
 	public boolean isImagePresent(Map<String,String> punish) throws IOException, InterruptedException {
-		
-			//12817.0
 			
 			Set<String> myUrl = avatarFilesizes.keySet();
 			for (String url : myUrl) {
 				
-				System.out.println("hello my value" + punish.get(url) );
-						
 				if(!avatarFilesizes.get(url).equals(punish.get(url))){
-					System.out.println(avatarFilesizes.get(url) +" Not Maching Values   " + punish.get(url));
-					
 						continue;	
 				}
 				
@@ -57,14 +51,10 @@ public class DynamicContent extends BaseClass {
 			}
 			clickAnElementByXpath("//a[contains(text(),'click')]");
 			driver.findElement(By.xpath("//a[contains(text(),'click')]")).click();
-			Thread.sleep(1000);
 			clickAnElementByXpath("//div[@class='large-2 columns']/img");
 			setImages();
 			isImagePresent(punish);
-		
 			
 			return false;	
-	}
-	
-	
+	}	
 }
