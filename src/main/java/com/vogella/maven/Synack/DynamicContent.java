@@ -17,6 +17,7 @@ import org.openqa.selenium.WebElement;
 public class DynamicContent extends BaseClass {
 	
 	Map<String,String> avatarFilesizes = new HashMap<String,String>();
+	Map<String,String> punisher;
 
 	private void setImages() throws IOException {
 		
@@ -55,5 +56,10 @@ public class DynamicContent extends BaseClass {
 				}	
 			}
 			return false;	
+	}
+	
+	public void  setUser(Map<String,String> punisher) {
+		this.punisher = punisher;
+		
 	}
 }

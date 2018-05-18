@@ -30,6 +30,7 @@ public class DynamicContentTest extends BaseClassTest {
 		String url ="https://the-internet.herokuapp.com/img/avatars/Original-Facebook-Geek-Profile-Avatar-3.jpg";	
 		Map<String,String> punisher = new HashMap<String,String>();
 		punisher.put(url, Float.toString(Psize.length()));
+		dynamic.setUser(punisher);
 		Boolean result = dynamic.isImagePresent(punisher);
 		Assert.assertTrue(result);
 		
